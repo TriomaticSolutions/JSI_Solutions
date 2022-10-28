@@ -1,42 +1,88 @@
-import { Image, Button, Flex, Heading, Stack, Text } from "@chakra-ui/react";
-import services__process1 from "../../../Assets/Images/services__process1.png";
+import services__process1 from "../../../Assets/Images/a_services__process1.png";
+import { Flex, Box, chakra, Button } from "@chakra-ui/react";
 
 export default function Page5() {
   return (
-    <Stack minH={"80vh"} mt={20} direction={{ base: "column", md: "row" }}>
-      <Flex flex={1}>
-        <Image
-          alt={"Login Image"}
-          objectFit={"cover"}
-          src={services__process1}
-        />
-      </Flex>
+    <Flex
+      bg="white"
+      _dark={{
+        bg: "#3e3e3e",
+      }}
+      py={50}
+      mt={100}
+      w="full"
+      flexDirection={"column"}
+      alignItems="center"
+      justifyContent="center"
+    >
+      <Box
+        bg="white"
+        _dark={{ bg: "gray.800" }}
+        mx={{ lg: 4 }}
+        display={{ lg: "flex" }}
+        maxW={{ lg: "7xl" }}
+        rounded={{ lg: "lg" }}
+      >
+        <Box>
+          <img src={services__process1} alt="" />
+        </Box>
 
-      <Flex p={8} flex={1} align={"center"} justify={"center"}>
-        <Stack spacing={6} w={"full"} maxW={"lg"}>
-          <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
+        <Flex
+          py={12}
+          px={6}
+          maxW={{
+            lg: "5xl",
+            base: "full",
+            sm: "full",
+          }}
+          w={{
+            lg: "50%",
+          }}
+          justifyContent="center"
+          flexDirection={"column"}
+        >
+          <chakra.h2
+            fontSize={{
+              sm: "2xl",
+              base: "1xl",
+              md: "3xl",
+            }}
+            color="#002b3d"
+            _dark={{
+              color: "white",
+            }}
+            fontWeight="bold"
+          >
             Our Service
-          </Heading>
-
-          <Text fontSize={{ base: "md", lg: "lg" }} color={"gray.500"}>
+          </chakra.h2>
+          <chakra.p
+            mt={4}
+            color="gray.800"
+            _dark={{
+              color: "gray.400",
+            }}
+          >
             At BDV Solutions we are here with you from sourcing and vetting
             employers to the day you get your green card and beyond.
-          </Text>
+          </chakra.p>
 
-          <Stack direction={{ base: "column", md: "row" }} spacing={4}>
+          <Box mt={8}>
             <Button
-              rounded={"full"}
-              bg={"gray.700"}
-              color={"white"}
+              bg="orange.400"
+              color="white"
+              px={5}
+              py={3}
+              fontWeight="semibold"
+              rounded="lg"
               _hover={{
-                bg: "blue.500",
+                bg: "gray.800",
               }}
             >
               Learn more
             </Button>
-          </Stack>
-        </Stack>
-      </Flex>
-    </Stack>
+          </Box>
+        </Flex>
+      </Box>
+    </Flex>
   );
 }

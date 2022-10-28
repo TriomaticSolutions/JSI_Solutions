@@ -91,7 +91,8 @@ const Navbar = () => {
                 >
                   Expertise
                 </MenuItem>
-                <MenuItem
+
+                {/* <MenuItem
                   onClick={() => navigate("/about/team")}
                   icon={<GroupsIcon />}
                 >
@@ -108,7 +109,7 @@ const Navbar = () => {
                   icon={<CameraEnhanceIcon />}
                 >
                   Press Coverage
-                </MenuItem>
+                </MenuItem> */}
               </MenuList>
             </Menu>
 
@@ -155,12 +156,13 @@ const Navbar = () => {
                 >
                   Testimonials
                 </MenuItem>
-                <MenuItem
+
+                {/* <MenuItem
                   onClick={() => navigate("/stories/cases")}
                   icon={<FormatQuoteIcon />}
                 >
                   Case Studies
-                </MenuItem>
+                </MenuItem> */}
               </MenuList>
             </Menu>
 
@@ -175,12 +177,12 @@ const Navbar = () => {
               </MenuButton>
 
               <MenuList>
-                <MenuItem
+                {/* <MenuItem
                   onClick={() => navigate("/resources/blog")}
                   icon={<ContactSupportIcon />}
                 >
                   Blog
-                </MenuItem>
+                </MenuItem> */}
                 <MenuItem
                   onClick={() => navigate("/resources/FAQ")}
                   icon={<HistoryEduIcon />}
@@ -190,13 +192,13 @@ const Navbar = () => {
               </MenuList>
             </Menu>
 
-            <Button
+            {/* <Button
               onClick={() => navigate("/partnership")}
               _hover={{ bg: "gray.50" }}
               bg={"transparent"}
             >
               Partnership
-            </Button>
+            </Button> */}
 
             <Button _hover={{ bg: "gray.50" }} bg={"transparent"}>
               Sign up
@@ -266,7 +268,8 @@ const Navbar = () => {
                   >
                     Expertise
                   </MenuItem>
-                  <MenuItem
+
+                  {/* <MenuItem
                     onClick={() => navigate("/about/team")}
                     icon={<AutoGraphIcon />}
                   >
@@ -283,7 +286,7 @@ const Navbar = () => {
                     icon={<CameraEnhanceIcon />}
                   >
                     Press Coverage
-                  </MenuItem>
+                  </MenuItem> */}
                 </MenuList>
               </Menu>
 
@@ -330,12 +333,12 @@ const Navbar = () => {
                   >
                     Testimonials
                   </MenuItem>
-                  <MenuItem
+                  {/* <MenuItem
                     onClick={() => navigate("/stories/cases")}
                     icon={<FormatQuoteIcon />}
                   >
                     Case Studies
-                  </MenuItem>
+                  </MenuItem> */}
                 </MenuList>
               </Menu>
 
@@ -350,12 +353,12 @@ const Navbar = () => {
                 </MenuButton>
 
                 <MenuList>
-                  <MenuItem
+                  {/* <MenuItem
                     onClick={() => navigate("/resources/blog")}
                     icon={<ContactSupportIcon />}
                   >
                     Blog
-                  </MenuItem>
+                  </MenuItem> */}
                   <MenuItem
                     onClick={() => navigate("/resources/FAQ")}
                     icon={<HistoryEduIcon />}
@@ -365,13 +368,13 @@ const Navbar = () => {
                 </MenuList>
               </Menu>
 
-              <Button
+              {/* <Button
                 onClick={() => navigate("/partnership")}
                 _hover={{ bg: "gray.50" }}
                 bg={"transparent"}
               >
                 Partnership
-              </Button>
+              </Button> */}
 
               <Button _hover={{ bg: "gray.50" }} bg={"transparent"}>
                 Sign up

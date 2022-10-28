@@ -1,14 +1,6 @@
-import {
-  Flex,
-  Icon,
-  Box,
-  chakra,
-  Image,
-  Heading,
-  Text,
-} from "@chakra-ui/react";
+import { Flex, Icon, Box, chakra, Image, Heading } from "@chakra-ui/react";
 
-import main2 from "../../Assets/Images/main2.png";
+import main2 from "../../Assets/Images/a_main2.png";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 const cardsDetail = [
@@ -111,19 +103,15 @@ const Cards = ({ image, name, content, country }) => {
 
 export default function CallToActionWithIllustration() {
   return (
-    <div
-      style={{
-        marginTop: "50px",
-        textAlign: "center",
-      }}
-    >
+    <Box>
       <Heading
         maxW={"1xl"}
-        fontWeight={500}
-        fontSize={{ base: "1xl", sm: "2xl", md: "3xl" }}
-        color={"#002b3d"}
         paddingBottom={3}
         borderBottom={"2px solid #002b3d"}
+        fontWeight={500}
+        textAlign={"center"}
+        fontSize={{ base: "2xl", sm: "3xl", md: "4xl" }}
+        color={"#002b3d"}
       >
         Life Changing Stories <br />
       </Heading>
@@ -144,6 +132,6 @@ export default function CallToActionWithIllustration() {
           <Cards {...cardInfo} key={id} />
         ))}
       </Flex>
-    </div>
+    </Box>
   );
 }

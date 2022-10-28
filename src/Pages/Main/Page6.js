@@ -1,5 +1,5 @@
-import { Box, chakra, Link, Flex, Button } from "@chakra-ui/react";
-import main4 from "../../Assets/Images/main4.png";
+import { Box, chakra, Flex, Button } from "@chakra-ui/react";
+import a_main4 from "../../Assets/Images/a_main4.png";
 
 export default function Page6() {
   return (
@@ -8,56 +8,46 @@ export default function Page6() {
       _dark={{
         bg: "#3e3e3e",
       }}
-      p={50}
+      py={50}
+      m={"auto"}
       w="full"
+      flexDirection={"column"}
       alignItems="center"
       justifyContent="center"
     >
       <Box
         bg="white"
         _dark={{ bg: "gray.800" }}
-        mx={{ lg: 8 }}
+        mx={{ lg: 4 }}
         display={{ lg: "flex" }}
-        maxW={{ lg: "5xl" }}
+        maxW={{ lg: "7xl" }}
         rounded={{ lg: "lg" }}
       >
-        <Box
-          w={{
-            lg: "50%",
-          }}
-        >
-          <Box
-            h={{
-              base: 64,
-              lg: "full",
-            }}
-            rounded={{
-              lg: "lg",
-            }}
-            bgSize="cover"
-            style={{
-              backgroundImage: `url(${main4})`,
-            }}
-          ></Box>
+        <Box>
+          <img src={a_main4} alt="" />
         </Box>
 
-        <Box
+        <Flex
           py={12}
           px={6}
           maxW={{
-            base: "xl",
             lg: "5xl",
+            base: "full",
+            sm: "full",
           }}
           w={{
             lg: "50%",
           }}
+          justifyContent="center"
+          flexDirection={"column"}
         >
           <chakra.h2
             fontSize={{
-              base: "2xl",
+              sm: "2xl",
+              base: "1xl",
               md: "3xl",
             }}
-            color="gray.800"
+            color="#002b3d"
             _dark={{
               color: "white",
             }}
@@ -67,7 +57,7 @@ export default function Page6() {
           </chakra.h2>
           <chakra.p
             mt={4}
-            color="gray.600"
+            color="gray.800"
             _dark={{
               color: "gray.400",
             }}
@@ -80,8 +70,8 @@ export default function Page6() {
 
           <Box mt={8}>
             <Button
-              bg="gray.900"
-              color="gray.100"
+              bg="orange.400"
+              color="white"
               px={5}
               py={3}
               fontWeight="semibold"
@@ -93,7 +83,7 @@ export default function Page6() {
               Check it now
             </Button>
           </Box>
-        </Box>
+        </Flex>
       </Box>
     </Flex>
   );

@@ -1,4 +1,4 @@
-import about__expertise1 from "../../../Assets/Images/about__expertise1.jpeg";
+import a_expertise1 from "../../../Assets/Images/a_expertise1.png";
 import { Box, Button, chakra, Flex } from "@chakra-ui/react";
 
 export default function Page5() {
@@ -8,37 +8,42 @@ export default function Page5() {
       _dark={{
         bg: "#3e3e3e",
       }}
-      p={50}
+      py={50}
       mt={100}
       w="full"
+      flexDirection={"column"}
       alignItems="center"
       justifyContent="center"
     >
       <Box
         bg="white"
         _dark={{ bg: "gray.800" }}
-        mx={{ lg: 8 }}
+        mx={{ lg: 4 }}
         display={{ lg: "flex" }}
-        maxW={{ lg: "5xl" }}
+        maxW={{ lg: "7xl" }}
         rounded={{ lg: "lg" }}
       >
-        <Box
+        <Flex
           py={12}
           px={6}
           maxW={{
-            base: "xl",
             lg: "5xl",
+            base: "full",
+            sm: "full",
           }}
           w={{
             lg: "50%",
           }}
+          justifyContent="center"
+          flexDirection={"column"}
         >
           <chakra.h2
             fontSize={{
-              base: "2xl",
+              sm: "2xl",
+              base: "1xl",
               md: "3xl",
             }}
-            color="orange.400"
+            color="#002b3d"
             _dark={{
               color: "white",
             }}
@@ -48,7 +53,7 @@ export default function Page5() {
           </chakra.h2>
           <chakra.p
             mt={4}
-            color="gray.700"
+            color="gray.800"
             _dark={{
               color: "gray.400",
             }}
@@ -59,8 +64,8 @@ export default function Page5() {
 
           <Box mt={8}>
             <Button
-              bg="gray.900"
-              color="gray.100"
+              bg="orange.400"
+              color="white"
               px={5}
               py={3}
               fontWeight="semibold"
@@ -72,26 +77,16 @@ export default function Page5() {
               Determine your eligibility
             </Button>
           </Box>
-        </Box>
+        </Flex>
 
         <Box
           w={{
             lg: "50%",
           }}
         >
-          <Box
-            h={{
-              base: 64,
-              lg: "full",
-            }}
-            rounded={{
-              lg: "lg",
-            }}
-            bgSize="cover"
-            style={{
-              backgroundImage: `url(${about__expertise1})`,
-            }}
-          ></Box>
+          <Box>
+            <img src={a_expertise1} alt="" />
+          </Box>
         </Box>
       </Box>
     </Flex>

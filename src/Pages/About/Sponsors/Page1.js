@@ -1,38 +1,94 @@
-import { Image, Button, Flex, Heading, Stack, Text } from "@chakra-ui/react";
-import about__sponsors1 from "../../../Assets/Images/about__sponsors1.png";
+import { Button, Flex, Box, chakra } from "@chakra-ui/react";
+import about__sponsors1 from "../../../Assets/Images/a_about__sponsors1.png";
 
 export default function Page5() {
   return (
-    <Stack minH={"80vh"} mt={20} direction={{ base: "column", md: "row" }}>
-      <Flex flex={1}>
-        <Image alt={"Login Image"} objectFit={"cover"} src={about__sponsors1} />
-      </Flex>
-
-      <Flex p={8} flex={1} align={"center"} justify={"center"}>
-        <Stack spacing={6} w={"full"} maxW={"lg"}>
-          <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
+    <Flex
+      bg="white"
+      _dark={{
+        bg: "#3e3e3e",
+      }}
+      py={50}
+      mt={100}
+      w="full"
+      flexDirection={"column"}
+      alignItems="center"
+      justifyContent="center"
+    >
+      <Box
+        bg="white"
+        _dark={{ bg: "gray.800" }}
+        mx={{ lg: 4 }}
+        display={{ lg: "flex" }}
+        maxW={{ lg: "7xl" }}
+        rounded={{ lg: "lg" }}
+      >
+        <Flex
+          py={12}
+          px={6}
+          maxW={{
+            lg: "5xl",
+            base: "full",
+            sm: "full",
+          }}
+          w={{
+            lg: "50%",
+          }}
+          justifyContent="center"
+          flexDirection={"column"}
+        >
+          <chakra.h2
+            fontSize={{
+              sm: "2xl",
+              base: "1xl",
+              md: "3xl",
+            }}
+            color="#002b3d"
+            _dark={{
+              color: "white",
+            }}
+            fontWeight="bold"
+          >
             Our Sponsors
-          </Heading>
-
-          <Text fontSize={{ base: "md", lg: "lg" }} color={"gray.500"}>
+          </chakra.h2>
+          <chakra.p
+            mt={4}
+            color="gray.800"
+            _dark={{
+              color: "gray.400",
+            }}
+          >
             The project board is an exclusive resource for contract work. It's
             perfect for freelancers, agencies, and moonlighters.
-          </Text>
+          </chakra.p>
 
-          <Stack direction={{ base: "column", md: "row" }} spacing={4}>
+          <Box mt={8}>
             <Button
-              rounded={"full"}
-              bg={"gray.700"}
-              color={"white"}
+              bg="orange.400"
+              color="white"
+              px={5}
+              py={3}
+              fontWeight="semibold"
+              rounded="lg"
               _hover={{
-                bg: "blue.500",
+                bg: "gray.800",
               }}
             >
               Explore the job opening
             </Button>
-          </Stack>
-        </Stack>
-      </Flex>
-    </Stack>
+          </Box>
+        </Flex>
+
+        <Box
+          w={{
+            lg: "50%",
+          }}
+        >
+          <Box>
+            <img src={about__sponsors1} alt="" />
+          </Box>
+        </Box>
+      </Box>
+    </Flex>
   );
 }

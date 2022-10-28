@@ -8,18 +8,18 @@ import { Routes, Route } from "react-router-dom";
 
 const Main = React.lazy(() => import("./Pages/Main/Main"));
 const Expertise = React.lazy(() => import("./Pages/About/Expertise/Expertise"));
-const Team = React.lazy(() => import("./Pages/About/Team/Team"));
-const Sponsors = React.lazy(() => import("./Pages/About/Sponsors/Sponsors"));
-const Press = React.lazy(() => import("./Pages/About/Press/Press"));
+// const Team = React.lazy(() => import("./Pages/About/Team/Team"));
+// const Sponsors = React.lazy(() => import("./Pages/About/Sponsors/Sponsors"));
+// const Press = React.lazy(() => import("./Pages/About/Press/Press"));
 const Process = React.lazy(() => import("./Pages/Services/Process/Process"));
 const Visa = React.lazy(() => import("./Pages/Services/Visa/Visa"));
 const Testimonials = React.lazy(() =>
   import("./Pages/Stories/Testimonials/Testimonials")
 );
-const Cases = React.lazy(() => import("./Pages/Stories/Cases/Cases"));
-const Blog = React.lazy(() => import("./Pages/Resources/Blog/Blog"));
+// const Cases = React.lazy(() => import("./Pages/Stories/Cases/Cases"));
+// const Blog = React.lazy(() => import("./Pages/Resources/Blog/Blog"));
 const FAQ = React.lazy(() => import("./Pages/Resources/FAQ/FAQ"));
-const Partnership = React.lazy(() => import("./Pages/Partnership/Partnership"));
+// const Partnership = React.lazy(() => import("./Pages/Partnership/Partnership"));
 
 function App() {
   return (
@@ -46,7 +46,7 @@ function App() {
               </React.Suspense>
             }
           />
-          <Route
+          {/* <Route
             exact
             path="/about/team"
             element={
@@ -54,8 +54,8 @@ function App() {
                 <Team />
               </React.Suspense>
             }
-          />
-          <Route
+          /> */}
+          {/* <Route
             exact
             path="/about/sponsors"
             element={
@@ -63,8 +63,8 @@ function App() {
                 <Sponsors />
               </React.Suspense>
             }
-          />
-          <Route
+          /> */}
+          {/* <Route
             exact
             path="/about/press"
             element={
@@ -72,7 +72,7 @@ function App() {
                 <Press />
               </React.Suspense>
             }
-          />
+          /> */}
           <Route
             exact
             path="/services/process"
@@ -100,7 +100,7 @@ function App() {
               </React.Suspense>
             }
           />
-          <Route
+          {/* <Route
             exact
             path="/stories/cases"
             element={
@@ -108,8 +108,8 @@ function App() {
                 <Cases />
               </React.Suspense>
             }
-          />
-          <Route
+          /> */}
+          {/* <Route
             exact
             path="/resources/blog"
             element={
@@ -117,7 +117,7 @@ function App() {
                 <Blog />
               </React.Suspense>
             }
-          />
+          /> */}
           <Route
             exact
             path="/resources/FAQ"
@@ -127,7 +127,7 @@ function App() {
               </React.Suspense>
             }
           />
-          <Route
+          {/* <Route
             exact
             path="/partnership"
             element={
@@ -135,7 +135,7 @@ function App() {
                 <Partnership />
               </React.Suspense>
             }
-          />
+          /> */}
         </Routes>
       </div>
 

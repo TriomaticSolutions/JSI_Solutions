@@ -1,27 +1,34 @@
-import { Button, Flex, Heading, Image, Stack, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Text, chakra } from "@chakra-ui/react";
+import a_main5 from "../../Assets/Images/a_main5.png";
 
 export default function SplitScreen() {
   return (
-    <div
-      style={{
-        margin: "50px 0px 50px 0px",
-        textAlign: "center",
+    <Flex
+      bg="white"
+      _dark={{
+        bg: "#3e3e3e",
       }}
+      py={50}
+      w="full"
+      flexDirection={"column"}
+      alignItems="center"
+      justifyContent="center"
     >
       <Heading
         maxW={"1xl"}
         fontWeight={500}
         fontSize={{ base: "1xl", sm: "2xl", md: "3xl" }}
-        lineHeight={"100%"}
+        color={"#002b3d"}
         mb={8}
-        color="#002b3d"
+        textAlign={"center"}
       >
         The 1st step in Achieving your American Dream. <br />
         <Text
+          textAlign={"center"}
           as={"span"}
           color={"gray.800"}
           style={{
-            fontSize: "19px",
+            fontSize: "16px",
             fontWeight: "normal",
           }}
         >
@@ -30,66 +37,94 @@ export default function SplitScreen() {
         </Text>
       </Heading>
 
-      <Stack direction={{ base: "column", md: "row" }}>
-        <Flex p={8} flex={1} align={"center"} justify={"center"}>
-          <Stack spacing={6} w={"full"} maxW={"lg"} textAlign={"start"}>
-            <Heading fontSize={{ base: "1xl", md: "2xl", lg: "3xl" }}>
-              <Text as={"span"} position={"relative"} textAlign={"start"}>
-                Freelance Unmatched Opportunity
-              </Text>{" "}
-            </Heading>
-            <Text
-              fontSize={{ base: "md", lg: "lg" }}
-              color={"gray.500"}
-              textAlign={"start"}
-            >
-              BDV Solutions is the largest immigration agency in the world
-              focused on the EB-3 Unskilled Visa. We offer the widest range of
-              EB-3 job opportunities and locations around the company. The EB-3
-              Unskilled Visa was established by the U.S. Government in 1990
-              through the Immigration and Nationality Act.
-            </Text>
-            <Stack direction={{ base: "column", md: "row" }} spacing={4}>
-              <Button
-                rounded={"full"}
-                bg={"blue.400"}
-                color={"white"}
-                _hover={{
-                  bg: "blue.500",
-                }}
-              >
-                Learn more
-              </Button>
-            </Stack>
-          </Stack>
-        </Flex>
+      <Box
+        bg="white"
+        _dark={{ bg: "gray.800" }}
+        mx={{ lg: 4 }}
+        display={{ lg: "flex" }}
+        maxW={{ lg: "7xl" }}
+        rounded={{ lg: "lg" }}
+      >
+        <Box>
+          <img src={a_main5} alt="" />
+        </Box>
 
-        <Flex flex={1}>
-          <Image
-            alt={"Login Image"}
-            objectFit={"cover"}
-            src={
-              "https://images.unsplash.com/photo-1527689368864-3a821dbccc34?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-            }
-          />
+        <Flex
+          py={12}
+          px={6}
+          maxW={{
+            base: "full",
+            lg: "5xl",
+            sm: "full",
+          }}
+          w={{
+            lg: "50%",
+          }}
+          justifyContent="center"
+          flexDirection={"column"}
+        >
+          <chakra.h2
+            fontSize={{
+              sm: "2xl",
+              base: "1xl",
+              md: "3xl",
+            }}
+            color="#002b3d"
+            _dark={{
+              color: "white",
+            }}
+            fontWeight="bold"
+          >
+            Freelance Unmatched Opportunity
+          </chakra.h2>
+          <chakra.p
+            mt={4}
+            color="gray.800"
+            _dark={{
+              color: "gray.400",
+            }}
+          >
+            BDV Solutions is the largest immigration agency in the world focused
+            on the EB-3 Unskilled Visa. We offer the widest range of EB-3 job
+            opportunities and locations around the company. The EB-3 Unskilled
+            Visa was established by the U.S. Government in 1990 through the
+            Immigration and Nationality Act.
+          </chakra.p>
+
+          <Box mt={8}>
+            <Button
+              bg="orange.400"
+              color="white"
+              px={5}
+              py={3}
+              fontWeight="semibold"
+              rounded="lg"
+              _hover={{
+                bg: "gray.800",
+              }}
+            >
+              Learn more
+            </Button>
+          </Box>
         </Flex>
-      </Stack>
+      </Box>
 
       <Heading
+        lineHeight={"90%"}
         maxW={"1xl"}
-        pr={"3rem"}
-        pl={"3rem"}
+        textAlign={"center"}
+        mt={8}
         fontWeight={500}
         fontSize={{ base: "1xl", sm: "2xl", md: "3xl" }}
-        lineHeight={"100%"}
-        mt={8}
+        color={"#002b3d"}
       >
         We can help you from wherever you are around the world. <br />
         <Text
+          textAlign={"center"}
           as={"span"}
-          color={"gray.500"}
+          color={"gray.800"}
           style={{
-            fontSize: "19px",
+            fontSize: "16px",
             fontWeight: "normal",
           }}
         >
@@ -99,6 +134,6 @@ export default function SplitScreen() {
           people from 106 countries!
         </Text>
       </Heading>
-    </div>
+    </Flex>
   );
 }

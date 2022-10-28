@@ -1,29 +1,73 @@
-import { Image, Flex, Heading, Stack, Text } from "@chakra-ui/react";
-import about__team1 from "../../../Assets/Images/about__team1.png";
+import { Flex, Box, chakra } from "@chakra-ui/react";
+import about__team1 from "../../../Assets/Images/a_about__team1.png";
 
 export default function Page5() {
   return (
-    <Stack minH={"80vh"} mt={20} direction={{ base: "column", md: "row" }}>
-      <Flex flex={1}>
-        <Image alt={"Login Image"} objectFit={"contain"} src={about__team1} />
-      </Flex>
+    <Flex
+      bg="white"
+      _dark={{
+        bg: "#3e3e3e",
+      }}
+      py={50}
+      mt={100}
+      w="full"
+      flexDirection={"column"}
+      alignItems="center"
+      justifyContent="center"
+    >
+      <Box
+        bg="white"
+        _dark={{ bg: "gray.800" }}
+        mx={{ lg: 4 }}
+        display={{ lg: "flex" }}
+        maxW={{ lg: "7xl" }}
+        rounded={{ lg: "lg" }}
+      >
+        <Box>
+          <img src={about__team1} alt="" />
+        </Box>
 
-      <Flex p={8} flex={1} align={"center"} justify={"center"}>
-        <Stack spacing={6} w={"full"} maxW={"lg"}>
-          <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
+        <Flex
+          py={12}
+          px={6}
+          maxW={{
+            lg: "5xl",
+            base: "full",
+            sm: "full",
+          }}
+          w={{
+            lg: "50%",
+          }}
+          justifyContent="center"
+          flexDirection={"column"}
+        >
+          <chakra.h2
+            fontSize={{
+              sm: "2xl",
+              base: "1xl",
+              md: "3xl",
+            }}
+            color="#002b3d"
+            _dark={{
+              color: "white",
+            }}
+            fontWeight="bold"
+          >
             Our team is the best in the industry!
-          </Heading>
-
-          <Text fontSize={{ base: "md", lg: "lg" }} color={"gray.500"}>
+          </chakra.h2>
+          <chakra.p
+            mt={4}
+            color="gray.800"
+            _dark={{
+              color: "gray.400",
+            }}
+          >
             Our team includes immigration attorneys, highly experienced
             immigration consultants, and even U.S. immigrants. <br />
-          </Text>
-
-          <Stack direction={{ base: "column", md: "row" }} spacing={4}>
-            <Text color={"gray.700"}>Your EB-3 Unskilled Visa experts.</Text>
-          </Stack>
-        </Stack>
-      </Flex>
-    </Stack>
+            Your EB-3 Unskilled Visa experts.
+          </chakra.p>
+        </Flex>
+      </Box>
+    </Flex>
   );
 }

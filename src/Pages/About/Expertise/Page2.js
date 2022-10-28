@@ -1,10 +1,4 @@
-import {
-  Box,
-  chakra,
-  Flex,
-  Icon,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Box, chakra, Flex, Icon, useColorModeValue } from "@chakra-ui/react";
 
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import GavelIcon from "@mui/icons-material/Gavel";
@@ -91,7 +85,7 @@ export default function GridBlurredBackdrop() {
   return (
     <Flex
       textAlign={"center"}
-      py={10}
+      py={16}
       justifyContent={"center"}
       direction={"column"}
       width={"full"}
@@ -100,7 +94,6 @@ export default function GridBlurredBackdrop() {
         <chakra.h1
           py={5}
           fontSize={48}
-          fontFamily={"Work Sans"}
           fontWeight={"bold"}
           color={useColorModeValue("gray.700", "gray.50")}
         >

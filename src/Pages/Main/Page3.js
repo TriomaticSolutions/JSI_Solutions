@@ -45,11 +45,14 @@ function TestimonialCard(props) {
   const { name, content, icon } = props;
   return (
     <Flex
-      p={10}
+      p={{
+        lg: "30px",
+        sm: "25px",
+        base: "15px",
+      }}
       boxShadow={"lg"}
       maxW={"640px"}
       direction={{ base: "column", md: "row" }}
-      width={"full"}
       rounded={"xl"}
       justifyContent={"space-between"}
       position={"relative"}
@@ -73,12 +76,23 @@ function TestimonialCard(props) {
       >
         <Icon
           as={icon}
-          style={{
-            height: "50px",
-            width: "50px",
+          h={{
+            lg: "50px",
+            sm: "40px",
+            base: "30px",
           }}
-          mr={"20px"}
+          w={{
+            lg: "50px",
+            sm: "40px",
+            base: "30px",
+          }}
+          mr={{
+            lg: "15px",
+            sm: "10px",
+            base: "5px",
+          }}
         />
+
         <Heading
           maxW={"1xl"}
           fontWeight={700}
@@ -86,6 +100,7 @@ function TestimonialCard(props) {
           color={"blue.400"}
         >
           {name}
+
           <chakra.p
             fontFamily={"Inter"}
             fontWeight={"medium"}
@@ -104,43 +119,73 @@ function TestimonialCard(props) {
 export default function GridBlurredBackdrop() {
   return (
     <Flex
-      textAlign={"center"}
-      p={10}
-      justifyContent={"center"}
-      direction={"column"}
-      bg={"#002b3d"}
-      width={"full"}
+      bg="#002b3d"
+      _dark={{
+        bg: "#3e3e3e",
+      }}
+      py={16}
+      w="full"
+      alignItems="center"
+      justifyContent="center"
+      bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
     >
-      <Box width={{ base: "full", sm: "lg", lg: "xl" }} margin={"auto"}>
-        <chakra.h1
-          fontSize={35}
-          fontFamily={"Work Sans"}
-          fontWeight={"bold"}
-          color={useColorModeValue("orange", "gray.50")}
-        >
-          Get Personal and Professional Support
-        </chakra.h1>
-        <chakra.h2
-          margin={"auto"}
-          fontWeight={"medium"}
-          color={useColorModeValue("white", "gray.400")}
-        >
-          Immigrating to the United States is not an easy process, but BDV
-          Solutions is here to guide you through the entire journey until you
-          get your Green Card.
-        </chakra.h2>
-      </Box>
-
-      <SimpleGrid
-        columns={{ base: 1, xl: 2 }}
-        spacing={"5"}
-        mt={10}
-        mx={"auto"}
+      <Box
+        _dark={{ bg: "#3e3e3e" }}
+        mx={{ lg: 4 }}
+        display={{ lg: "flex" }}
+        maxW={{ lg: "7xl" }}
+        rounded={{ lg: "lg" }}
       >
-        {testimonials.map((cardInfo, index) => (
-          <TestimonialCard {...cardInfo} index={index} />
-        ))}
-      </SimpleGrid>
+        <Flex
+          py={12}
+          px={6}
+          maxW={{
+            base: "full",
+            lg: "5xl",
+            sm: "full",
+          }}
+          justifyContent="center"
+          flexDirection={"column"}
+        >
+          <chakra.h2
+            fontSize={{
+              sm: "2xl",
+              base: "1xl",
+              md: "3xl",
+            }}
+            color="orange.400"
+            _dark={{
+              color: "white",
+            }}
+            fontWeight="bold"
+          >
+            Get Personal and Professional Support
+          </chakra.h2>
+
+          <chakra.p
+            mt={4}
+            color="white"
+            _dark={{
+              color: "gray.400",
+            }}
+          >
+            Immigrating to the United States is not an easy process, but BDV
+            Solutions is here to guide you through the entire journey until you
+            get your Green Card.
+          </chakra.p>
+
+          <SimpleGrid
+            columns={{ base: 1, xl: 2 }}
+            spacing={"5"}
+            mt={10}
+            mx={"auto"}
+          >
+            {testimonials.map((cardInfo, index) => (
+              <TestimonialCard {...cardInfo} index={index} />
+            ))}
+          </SimpleGrid>
+        </Flex>
+      </Box>
     </Flex>
   );
 }

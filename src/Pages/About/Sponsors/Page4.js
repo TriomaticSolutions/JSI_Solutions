@@ -1,37 +1,66 @@
-import {
-  Stack,
-  Flex,
-  Text,
-  VStack,
-  useBreakpointValue,
-} from "@chakra-ui/react";
+import { Flex, chakra, Box } from "@chakra-ui/react";
 
 export default function WithBackgroundImage() {
   return (
-    <Flex w={"full"} h={"30vh"} bg={"#005287"}>
-      <VStack
-        w={"full"}
-        justify={"center"}
-        px={useBreakpointValue({ base: 2, md: 6 })}
+    <Flex
+      bg="#005287"
+      _dark={{
+        bg: "#3e3e3e",
+      }}
+      py={16}
+      w="full"
+      alignItems="center"
+      justifyContent="center"
+      bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
+    >
+      <Box
+        _dark={{ bg: "#3e3e3e" }}
+        mx={{ lg: 4 }}
+        display={{ lg: "flex" }}
+        flexDirection={"column"}
+        maxW={{ lg: "7xl" }}
+        rounded={{ lg: "lg" }}
       >
-        <Stack maxW={"2xl"} align={"flex-start"} spacing={4}>
-          <Text
-            color={"white"}
-            fontWeight={500}
-            fontSize={useBreakpointValue({ base: "1xl", md: "2xl" })}
+        <Flex
+          py={12}
+          px={6}
+          maxW={{
+            base: "full",
+            lg: "5xl",
+            sm: "full",
+          }}
+          justifyContent="center"
+          flexDirection={"column"}
+        >
+          <chakra.h2
+            fontSize={{
+              sm: "2xl",
+              base: "1xl",
+              md: "3xl",
+            }}
+            color="orange.400"
+            _dark={{
+              color: "white",
+            }}
+            fontWeight="bold"
           >
             Where our sponsors are located
-          </Text>
-          <Stack direction={"row"}>
-            <Text color={"white"}>
-              Our employers are located across the country! We are excited that
-              we have been able to work with employers in 36 states and
-              counting! BDV Solutions is hoping to even further broaden the
-              states that we have offerings in, so stay tuned in the future.
-            </Text>
-          </Stack>
-        </Stack>
-      </VStack>
+          </chakra.h2>
+
+          <chakra.p
+            mt={4}
+            color="white"
+            _dark={{
+              color: "gray.400",
+            }}
+          >
+            Our employers are located across the country! We are excited that we
+            have been able to work with employers in 36 states and counting! BDV
+            Solutions is hoping to even further broaden the states that we have
+            offerings in, so stay tuned in the future.
+          </chakra.p>
+        </Flex>
+      </Box>
     </Flex>
   );
 }

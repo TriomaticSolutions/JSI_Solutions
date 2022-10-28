@@ -1,44 +1,97 @@
+import about__sponsors2 from "../../../Assets/Images/a_about__sponsors2.png";
+import { Button, Flex, Box, chakra } from "@chakra-ui/react";
 import {
-  UnorderedList,
+  List,
   ListItem,
-  Image,
-  Flex,
-  Heading,
-  Stack,
-  Text,
+  ListIcon,
+  OrderedList,
+  UnorderedList,
 } from "@chakra-ui/react";
-import about__sponsors2 from "../../../Assets/Images/about__sponsors2.png";
 
 export default function Page5() {
   return (
-    <Stack minH={"80vh"} direction={{ base: "column", md: "row" }}>
-      <Flex p={8} flex={1} align={"center"} justify={"center"}>
-        <Stack spacing={6} w={"full"} maxW={"lg"}>
-          <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
-            EB-3 Job Opportunities
-          </Heading>
+    <Flex
+      bg="white"
+      _dark={{
+        bg: "#3e3e3e",
+      }}
+      py={50}
+      mt={100}
+      w="full"
+      flexDirection={"column"}
+      alignItems="center"
+      justifyContent="center"
+    >
+      <Box
+        bg="white"
+        _dark={{ bg: "gray.800" }}
+        mx={{ lg: 4 }}
+        display={{ lg: "flex" }}
+        maxW={{ lg: "7xl" }}
+        rounded={{ lg: "lg" }}
+      >
+        <Box
+          w={{
+            lg: "50%",
+          }}
+        >
+          <Box>
+            <img src={about__sponsors2} alt="" />
+          </Box>
+        </Box>
 
-          <Text fontSize={{ base: "md", lg: "lg" }} color={"gray.500"}>
-            BDV Solutions works exclusively with the EB-3 Unskilled Visa, which
-            means that all the employers that we work with are sponsoring you
-            for an entry-level unskilled job. We have jobs in the following
-            industries:
-          </Text>
+        <Flex
+          py={12}
+          px={6}
+          maxW={{
+            lg: "5xl",
+            base: "full",
+            sm: "full",
+          }}
+          w={{
+            lg: "50%",
+          }}
+          justifyContent="center"
+          flexDirection={"column"}
+        >
+          <chakra.h2
+            fontSize={{
+              sm: "2xl",
+              base: "1xl",
+              md: "3xl",
+            }}
+            color="#002b3d"
+            _dark={{
+              color: "white",
+            }}
+            fontWeight="bold"
+          >
+            Our Sponsors
+          </chakra.h2>
+          <chakra.p
+            mt={4}
+            color="gray.800"
+            _dark={{
+              color: "gray.400",
+            }}
+          >
+            The project board is an exclusive resource for contract work. It's
+            perfect for freelancers, agencies, and moonlighters.
+          </chakra.p>
 
-          <Stack direction={{ base: "column", md: "row" }} spacing={4}>
-            <UnorderedList mb={5}>
+          <Box mt={8}>
+            <UnorderedList>
               <ListItem>Food Prep</ListItem>
-              <ListItem>Manufacturing</ListItem>
+              <ListItem>Janitorial</ListItem>
+              <ListItem>Fast Food</ListItem>
               <ListItem>Packaging</ListItem>
+              <ListItem>Dishwashing</ListItem>
               <ListItem>Warehousing</ListItem>
+              <ListItem>Manufacturing</ListItem>
             </UnorderedList>
-          </Stack>
-        </Stack>
-      </Flex>
-
-      <Flex flex={1}>
-        <Image alt={"Login Image"} objectFit={"cover"} src={about__sponsors2} />
-      </Flex>
-    </Stack>
+          </Box>
+        </Flex>
+      </Box>
+    </Flex>
   );
 }
