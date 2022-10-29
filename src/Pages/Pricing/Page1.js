@@ -1,4 +1,4 @@
-import { Flex, Button, Box, chakra } from "@chakra-ui/react";
+import { Flex, Box, chakra } from "@chakra-ui/react";
 import pricing from "../../Assets/Images/a_pricing.png";
 
 export default function CallToActionWithIllustration() {

@@ -61,7 +61,13 @@ const Page2 = () => {
       _dark={{
         bg: "gray.600",
       }}
-      p={10}
+      py={12}
+      px={{
+        base: "1",
+        sm: "2",
+        md: "4",
+        lg: "6",
+      }}
       alignItems="center"
       justifyContent="center"
     >
@@ -103,7 +109,7 @@ const Page2 = () => {
               columns={[1, , , 2]}
               gap="24px"
               rounded="md"
-              mx={[10, , 24]}
+              mx={[2, , 24]}
               textAlign="left"
             >
               <Box
@@ -116,7 +122,15 @@ const Page2 = () => {
                 rounded="md"
               >
                 <Flex direction="column">
-                  <Box px={10} pb={5}>
+                  <Box
+                    px={{
+                      base: "2",
+                      sm: "4",
+                      md: "6",
+                      lg: "8",
+                    }}
+                    pb={5}
+                  >
                     <Badge
                       mb={1}
                       fontSize="xs"
@@ -261,7 +275,15 @@ const Page2 = () => {
                 rounded="md"
               >
                 <Flex direction="column">
-                  <Box px={10} pb={5}>
+                  <Box
+                    px={{
+                      base: "2",
+                      sm: "4",
+                      md: "6",
+                      lg: "8",
+                    }}
+                    pb={5}
+                  >
                     <Badge
                       mb={1}
                       fontSize="xs"
@@ -406,7 +428,15 @@ const Page2 = () => {
                 rounded="md"
               >
                 <Flex direction="column">
-                  <Box px={10} pb={5}>
+                  <Box
+                    px={{
+                      base: "2",
+                      sm: "4",
+                      md: "6",
+                      lg: "8",
+                    }}
+                    pb={5}
+                  >
                     <Badge
                       mb={1}
                       fontSize="xs"
@@ -550,7 +580,15 @@ const Page2 = () => {
                 rounded="md"
               >
                 <Flex direction="column">
-                  <Box px={10} pb={5}>
+                  <Box
+                    px={{
+                      base: "2",
+                      sm: "4",
+                      md: "6",
+                      lg: "8",
+                    }}
+                    pb={5}
+                  >
                     <Badge
                       mb={1}
                       fontSize="xs"
@@ -632,7 +670,12 @@ const Page2 = () => {
                   </Box>
 
                   <Flex
-                    px={10}
+                    px={{
+                      base: "2",
+                      sm: "4",
+                      md: "6",
+                      lg: "8",
+                    }}
                     pt={5}
                     pb={10}
                     direction="column"
@@ -687,8 +730,14 @@ const Page2 = () => {
 
             <Flex
               mb="100px"
-              mx={[10, , 24]}
-              p={10}
+              mx={[4, , 24]}
+              px={{
+                base: "2",
+                sm: "4",
+                md: "6",
+                lg: "8",
+              }}
+              py={6}
               mt={5}
               rounded="md"
               bg="#1a202c"

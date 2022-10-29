@@ -48,7 +48,7 @@ const Questions = ({ name, content }) => {
         bg: "gray.800",
       }}
     >
-      <Box p={6}>
+      <Box p={2}>
         <Box>
           <chakra.h1
             maxW={"full"}
@@ -58,7 +58,7 @@ const Questions = ({ name, content }) => {
               color: "white",
             }}
             fontWeight="bold"
-            fontSize="large"
+            fontSize={useBreakpointValue({ base: "1xl", md: "2xl" })}
             alignItems={"start"}
             mt={2}
           >
@@ -66,7 +66,6 @@ const Questions = ({ name, content }) => {
           </chakra.h1>
           <chakra.p
             mt={2}
-            fontSize="sm"
             color="black"
             _dark={{
               color: "gray.400",
@@ -86,7 +85,13 @@ const Page3 = () => {
       _dark={{
         bg: "#3e3e3e",
       }}
-      p={50}
+      py={12}
+      px={{
+        base: "1",
+        sm: "2",
+        md: "4",
+        lg: "6",
+      }}
       mt={100}
       w="full"
       flexDirection={"column"}
@@ -94,14 +99,14 @@ const Page3 = () => {
       <Stack color={"orange.400"} spacing={4}>
         <Heading
           fontWeight={"bold"}
-          fontSize={useBreakpointValue({ base: "4xl", md: "5xl" })}
+          fontSize={useBreakpointValue({ base: "2xl", md: "3xl" })}
           lineHeight={"100%"}
         >
           Frequently Asked Questions
         </Heading>
       </Stack>
 
-      <Box spacing={"5"} m={5}>
+      <Box spacing={"5"} m={2}>
         {questionsContent.map((questionsDetails, id) => (
           <Questions {...questionsDetails} key={id} />
         ))}
