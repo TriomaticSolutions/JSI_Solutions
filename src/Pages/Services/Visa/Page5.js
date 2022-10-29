@@ -19,8 +19,10 @@ function StatsCard(props) {
       border={"2px solid"}
       rounded={"lg"}
     >
-      <Icon as={title} color={"#002b3d"} />
-      <StatNumber fontSize={"sm"}>{stat}</StatNumber>
+      <Icon as={title} />
+      <StatNumber color={"#4299e1"} fontSize={"sm"}>
+        {stat}
+      </StatNumber>
     </Stat>
   );
 }
@@ -37,7 +39,7 @@ export default function BasicStatistics() {
       textAlign={"center"}
     >
       <chakra.h1
-        color={"blue.400"}
+        color={"#002b3d"}
         textAlign={"center"}
         fontSize={"3xl"}
         fontWeight={"bold"}

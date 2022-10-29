@@ -45,10 +45,6 @@ export default function SplitScreen() {
         maxW={{ lg: "7xl" }}
         rounded={{ lg: "lg" }}
       >
-        <Box>
-          <img src={a_main5} alt="" />
-        </Box>
-
         <Flex
           py={12}
           px={6}
@@ -107,6 +103,10 @@ export default function SplitScreen() {
             </Button>
           </Box>
         </Flex>
+
+        <Box>
+          <img src={a_main5} alt="" />
+        </Box>
       </Box>
 
       <Heading

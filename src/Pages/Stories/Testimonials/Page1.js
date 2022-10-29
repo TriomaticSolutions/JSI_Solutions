@@ -135,7 +135,6 @@ export default function GridBlurredBackdrop() {
         <chakra.h1
           py={5}
           fontSize={48}
-          fontFamily={"Work Sans"}
           fontWeight={"bold"}
           color={useColorModeValue("gray.700", "gray.50")}
         >

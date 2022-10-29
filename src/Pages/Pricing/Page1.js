@@ -1,33 +1,42 @@
-import { Flex, Box, chakra } from "@chakra-ui/react";
+import { Flex, Button, Box, chakra } from "@chakra-ui/react";
+import pricing from "../../Assets/Images/a_pricing.png";
 
 export default function CallToActionWithIllustration() {
   return (
     <Flex
-      bg="#005287"
+      bg="white"
       _dark={{
         bg: "#3e3e3e",
       }}
-      py={16}
+      py={50}
+      mt={100}
       w="full"
+      flexDirection={"column"}
       alignItems="center"
       justifyContent="center"
-      bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
     >
       <Box
-        _dark={{ bg: "#3e3e3e" }}
+        bg="white"
+        _dark={{ bg: "gray.800" }}
         mx={{ lg: 4 }}
         display={{ lg: "flex" }}
-        flexDirection={"column"}
         maxW={{ lg: "7xl" }}
         rounded={{ lg: "lg" }}
       >
+        <Box>
+          <img src={pricing} alt="" />
+        </Box>
+
         <Flex
           py={12}
           px={6}
           maxW={{
-            base: "full",
             lg: "5xl",
+            base: "full",
             sm: "full",
+          }}
+          w={{
+            lg: "50%",
           }}
           justifyContent="center"
           flexDirection={"column"}
@@ -38,27 +47,23 @@ export default function CallToActionWithIllustration() {
               base: "1xl",
               md: "3xl",
             }}
-            color="orange.400"
+            color="#002b3d"
             _dark={{
               color: "white",
             }}
             fontWeight="bold"
           >
-            Changing lives through legal U.S. Immigration
+            Service fees
           </chakra.h2>
-
           <chakra.p
             mt={4}
-            color="white"
+            color="gray.800"
             _dark={{
               color: "gray.400",
             }}
           >
-            We are honored to see the positive impact this process can have on
-            the lives of individuals and their families from around the world.
-            Whether you are starting this process from your home country, your
-            current country of residence or you are already in the United States
-            on a non-immigrant visa, this process can be successful for you!
+            Invest in your and your family's future by starting your U.S. green
+            card process.
           </chakra.p>
         </Flex>
       </Box>

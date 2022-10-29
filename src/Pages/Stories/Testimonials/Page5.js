@@ -1,51 +1,96 @@
-import {
-  Container,
-  Heading,
-  Stack,
-  Text,
-  Button,
-  useBreakpointValue,
-} from "@chakra-ui/react";
+import { Flex, Box, chakra, Button } from "@chakra-ui/react";
 
 export default function CallToActionWithIllustration() {
   return (
-    <Container bg={"#002b3d"} mt={10} py={10} maxW={"full"}>
-      <Stack textAlign={"start"} align={"center"} spacing={4}>
-        <Heading
-          maxW={"1xl"}
-          fontWeight={700}
-          fontSize={useBreakpointValue({ base: "2xl", md: "3xl" })}
-          lineHeight={"100%"}
-          color={"orange.400"}
+    <Flex
+      bg="#005287"
+      _dark={{
+        bg: "#3e3e3e",
+      }}
+      py={16}
+      w="full"
+      alignItems="center"
+      justifyContent="center"
+      bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
+    >
+      <Box
+        _dark={{ bg: "#3e3e3e" }}
+        mx={{ lg: 4 }}
+        display={{ lg: "flex" }}
+        flexDirection={"column"}
+        maxW={{ lg: "7xl" }}
+        rounded={{ lg: "lg" }}
+      >
+        <Flex
+          py={12}
+          px={6}
+          maxW={{
+            base: "full",
+            lg: "5xl",
+            sm: "full",
+          }}
+          justifyContent="center"
+          flexDirection={"column"}
         >
-          Is this process right for you?
-        </Heading>
-        <Heading
-          maxW={"1xl"}
-          fontWeight={600}
-          fontSize={useBreakpointValue({ base: "1xl", md: "2xl" })}
-          lineHeight={"100%"}
-          color={"blue.400"}
-        >
-          Will this process work for your situation?
-        </Heading>
-        <Text color={"white"} maxW={"2xl"}>
-          Once you create an account here, you can set up a free introductory
-          call with one of our employees who will discuss your case with you and
-          help you evaluate if this program is right for you.
-        </Text>
-
-        <Stack direction={"row"}>
-          <Button
-            rounded={"full"}
-            colorScheme={"orange"}
-            bg={"orange.400"}
-            _hover={{ bg: "orange.500" }}
+          <chakra.h2
+            fontSize={{
+              sm: "2xl",
+              base: "1xl",
+              md: "3xl",
+            }}
+            color="orange.400"
+            _dark={{
+              color: "white",
+            }}
+            fontWeight="bold"
           >
-            Book your free call
-          </Button>
-        </Stack>
-      </Stack>
-    </Container>
+            Is this process right for you?
+          </chakra.h2>
+          <chakra.h4
+            fontSize={{
+              sm: "2xl",
+              base: "1xl",
+              md: "3xl",
+            }}
+            color="blue.400"
+            _dark={{
+              color: "white",
+            }}
+            fontWeight="bold"
+          >
+            Will this process work for your situation?
+          </chakra.h4>
+
+          <chakra.p
+            mt={4}
+            color="white"
+            _dark={{
+              color: "gray.400",
+            }}
+          >
+            Once you create an account here, you can set up a free introductory
+            call with one of our employees who will discuss your case with you
+            and help you evaluate if this program is right for you.
+          </chakra.p>
+
+          <Box mt={8}>
+            <Button
+              bg="blue.400"
+              color="white"
+              display={"block"}
+              px={5}
+              py={3}
+              fontWeight="semibold"
+              rounded="lg"
+              _hover={{
+                bg: "orange.400",
+              }}
+            >
+              Book your free call
+            </Button>
+          </Box>
+        </Flex>
+      </Box>
+    </Flex>
   );
 }

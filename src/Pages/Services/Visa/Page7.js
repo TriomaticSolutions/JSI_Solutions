@@ -1,41 +1,82 @@
-import {
-  Container,
-  Heading,
-  Stack,
-  Text,
-  Button,
-  useBreakpointValue,
-} from "@chakra-ui/react";
+import { Button, Flex, Box, chakra } from "@chakra-ui/react";
 
 export default function CallToActionWithIllustration() {
   return (
-    <Container bg={"#002b3d"} mt={16} py={10} maxW={"full"}>
-      <Stack color={"white"} textAlign={"start"} align={"center"} spacing={4}>
-        <Heading
-          maxW={"1xl"}
-          fontWeight={700}
-          fontSize={useBreakpointValue({ base: "2xl", md: "3xl" })}
-          lineHeight={"100%"}
+    <Flex
+      bg="#005287"
+      _dark={{
+        bg: "#3e3e3e",
+      }}
+      py={16}
+      w="full"
+      alignItems="center"
+      justifyContent="center"
+      bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
+    >
+      <Box
+        _dark={{ bg: "#3e3e3e" }}
+        mx={{ lg: 4 }}
+        display={{ lg: "flex" }}
+        flexDirection={"column"}
+        maxW={{ lg: "7xl" }}
+        rounded={{ lg: "lg" }}
+      >
+        <Flex
+          py={12}
+          px={6}
+          maxW={{
+            base: "full",
+            lg: "5xl",
+            sm: "full",
+          }}
+          justifyContent="center"
+          flexDirection={"column"}
         >
-          A Reliable Process
-        </Heading>
-        <Text maxW={"2xl"}>
-          The EB-3 Unskilled visa process is not based on luck, chance, or
-          skill. The EB-3 Unskilled Visa process leads many applicants with a
-          range of backgrounds to a U.S. Green Card.
-        </Text>
-
-        <Stack direction={"row"}>
-          <Button
-            rounded={"full"}
-            colorScheme={"orange"}
-            bg={"orange.400"}
-            _hover={{ bg: "orange.500" }}
+          <chakra.h2
+            fontSize={{
+              sm: "2xl",
+              base: "1xl",
+              md: "3xl",
+            }}
+            color="orange.400"
+            _dark={{
+              color: "white",
+            }}
+            fontWeight="bold"
           >
-            Check out
-          </Button>
-        </Stack>
-      </Stack>
-    </Container>
+            A Reliable Process
+          </chakra.h2>
+
+          <chakra.p
+            mt={4}
+            color="white"
+            _dark={{
+              color: "gray.400",
+            }}
+          >
+            The EB-3 Unskilled visa process is not based on luck, chance, or
+            skill. The EB-3 Unskilled Visa process leads many applicants with a
+            range of backgrounds to a U.S. Green Card.
+          </chakra.p>
+
+          <Box mt={8}>
+            <Button
+              bg="blue.400"
+              color="white"
+              display={"block"}
+              px={5}
+              py={3}
+              fontWeight="semibold"
+              rounded="lg"
+              _hover={{
+                bg: "orange.400",
+              }}
+            >
+              Check out
+            </Button>
+          </Box>
+        </Flex>
+      </Box>
+    </Flex>
   );
 }

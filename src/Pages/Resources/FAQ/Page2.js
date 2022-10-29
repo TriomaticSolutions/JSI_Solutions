@@ -1,40 +1,81 @@
-import {
-  Button,
-  Container,
-  Heading,
-  Stack,
-  Text,
-  useBreakpointValue,
-} from "@chakra-ui/react";
+import { Button, Flex, chakra, Box } from "@chakra-ui/react";
 
 export default function CallToActionWithIllustration() {
   return (
-    <Container bg={"#002b3d"} mt={16} py={10} maxW={"full"}>
-      <Stack color={"white"} textAlign={"start"} align={"center"} spacing={4}>
-        <Heading
-          maxW={"1xl"}
-          fontWeight={700}
-          fontSize={useBreakpointValue({ base: "2xl", md: "3xl" })}
-          lineHeight={"100%"}
-          color={"orange.400"}
+    <Flex
+      bg="#005287"
+      _dark={{
+        bg: "#3e3e3e",
+      }}
+      py={16}
+      w="full"
+      alignItems="center"
+      justifyContent="center"
+      bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
+    >
+      <Box
+        _dark={{ bg: "#3e3e3e" }}
+        mx={{ lg: 4 }}
+        display={{ lg: "flex" }}
+        flexDirection={"column"}
+        maxW={{ lg: "7xl" }}
+        rounded={{ lg: "lg" }}
+      >
+        <Flex
+          py={12}
+          px={6}
+          maxW={{
+            base: "full",
+            lg: "5xl",
+            sm: "full",
+          }}
+          justifyContent="center"
+          flexDirection={"column"}
         >
-          Check out our blog
-        </Heading>
-        <Text maxW={"2xl"}>
-          Read more about particular EB-3 topics and BDV Solutions on our blog.
-        </Text>
-
-        <Stack direction={"row"}>
-          <Button
-            rounded={"full"}
-            colorScheme={"orange"}
-            bg={"orange.400"}
-            _hover={{ bg: "orange.500" }}
+          <chakra.h2
+            fontSize={{
+              sm: "2xl",
+              base: "1xl",
+              md: "3xl",
+            }}
+            color="orange.400"
+            _dark={{
+              color: "white",
+            }}
+            fontWeight="bold"
           >
-            Check out
-          </Button>
-        </Stack>
-      </Stack>
-    </Container>
+            Check out our blog
+          </chakra.h2>
+
+          <chakra.p
+            mt={4}
+            color="white"
+            _dark={{
+              color: "gray.400",
+            }}
+          >
+            Read more about particular EB-3 topics and BDV Solutions on our
+            blog.
+          </chakra.p>
+
+          <Box mt={8}>
+            <Button
+              bg="blue.400"
+              color="white"
+              display={"block"}
+              px={5}
+              py={3}
+              fontWeight="semibold"
+              rounded="lg"
+              _hover={{
+                bg: "orange.400",
+              }}
+            >
+              Check out
+            </Button>
+          </Box>
+        </Flex>
+      </Box>
+    </Flex>
   );
 }

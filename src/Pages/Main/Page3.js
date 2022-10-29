@@ -119,7 +119,7 @@ function TestimonialCard(props) {
 export default function GridBlurredBackdrop() {
   return (
     <Flex
-      bg="#002b3d"
+      bg="#005287"
       _dark={{
         bg: "#3e3e3e",
       }}

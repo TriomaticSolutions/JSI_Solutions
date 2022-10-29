@@ -22,7 +22,7 @@ function StatsCard(props) {
       <StatLabel fontWeight={"medium"} mb={2} isTruncated>
         {title}
       </StatLabel>
-      <StatNumber fontSize={"2xl"} fontWeight={"medium"}>
+      <StatNumber color={"#4299e1"} fontSize={"2xl"} fontWeight={"medium"}>
         {stat}
       </StatNumber>
     </Stat>
@@ -41,6 +41,7 @@ export default function BasicStatistics() {
       textAlign={"center"}
     >
       <chakra.h1
+        color={"#002b3d"}
         textAlign={"center"}
         fontSize={"4xl"}
         py={10}

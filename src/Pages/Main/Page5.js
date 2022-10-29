@@ -4,11 +4,11 @@ import a_main3 from "../../Assets/Images/a_main3.png";
 export default function Page5() {
   return (
     <Flex
-      bg="#002b3d"
+      bg="#005287"
       _dark={{
         bg: "#3e3e3e",
       }}
-      py={50}
+      py={16}
       w="full"
       alignItems="center"
       justifyContent="center"
@@ -21,6 +21,10 @@ export default function Page5() {
         maxW={{ lg: "7xl" }}
         rounded={{ lg: "lg" }}
       >
+        <Box>
+          <img src={a_main3} alt="" />
+        </Box>
+
         <Flex
           py={12}
           px={6}
@@ -78,10 +82,6 @@ export default function Page5() {
             </Button>
           </Box>
         </Flex>
-
-        <Box>
-          <img src={a_main3} alt="" />
-        </Box>
       </Box>
     </Flex>
   );

@@ -16,16 +16,16 @@ import {
   MenuItem,
 } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
-import GroupsIcon from "@mui/icons-material/Groups";
+// import GroupsIcon from "@mui/icons-material/Groups";
+// import GroupIcon from "@mui/icons-material/Group";
+// import CameraEnhanceIcon from "@mui/icons-material/CameraEnhance";
+// import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
+// import ContactSupportIcon from "@mui/icons-material/ContactSupport";
 import MenuIcon from "@mui/icons-material/Menu";
 import AutoGraphIcon from "@mui/icons-material/AutoGraph";
-import GroupIcon from "@mui/icons-material/Group";
-import CameraEnhanceIcon from "@mui/icons-material/CameraEnhance";
 import AccountTreeIcon from "@mui/icons-material/AccountTree";
 import ArticleIcon from "@mui/icons-material/Article";
 import QueryStatsIcon from "@mui/icons-material/QueryStats";
-import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
-import ContactSupportIcon from "@mui/icons-material/ContactSupport";
 import HistoryEduIcon from "@mui/icons-material/HistoryEdu";
 import { useNavigate } from "react-router-dom";
 import logo2 from "../Assets/Images/logo5.png";
@@ -200,11 +200,27 @@ const Navbar = () => {
               Partnership
             </Button> */}
 
-            <Button _hover={{ bg: "gray.50" }} bg={"transparent"}>
+            <Button
+              onClick={() => navigate("/pricing")}
+              _hover={{ bg: "gray.50" }}
+              bg={"transparent"}
+            >
+              Pricing
+            </Button>
+
+            <Button
+              onClick={() => navigate("/signup")}
+              _hover={{ bg: "gray.50" }}
+              bg={"transparent"}
+            >
               Sign up
             </Button>
 
-            <Button _hover={{ bg: "gray.50" }} bg={"transparent"}>
+            <Button
+              onClick={() => navigate("/signin")}
+              _hover={{ bg: "gray.50" }}
+              bg={"transparent"}
+            >
               Login
             </Button>
           </HStack>
@@ -376,11 +392,27 @@ const Navbar = () => {
                 Partnership
               </Button> */}
 
-              <Button _hover={{ bg: "gray.50" }} bg={"transparent"}>
+              <Button
+                onClick={() => navigate("/pricing")}
+                _hover={{ bg: "gray.50" }}
+                bg={"transparent"}
+              >
+                Pricing
+              </Button>
+
+              <Button
+                onClick={() => navigate("/signup")}
+                _hover={{ bg: "gray.50" }}
+                bg={"transparent"}
+              >
                 Sign up
               </Button>
 
-              <Button _hover={{ bg: "gray.50" }} bg={"transparent"}>
+              <Button
+                onClick={() => navigate("/signin")}
+                _hover={{ bg: "gray.50" }}
+                bg={"transparent"}
+              >
                 Login
               </Button>
             </VStack>

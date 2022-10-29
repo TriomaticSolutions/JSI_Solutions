@@ -20,13 +20,16 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 
+import logo2 from "../Assets/Images/logo5.png";
+
 export default function Footer() {
   return (
     <Box
-      bg="gray.100"
+      bg="#C6F6D5"
       _dark={{
         bg: "gray.600",
       }}
+      // bgGradient={"linear(to-t, blackAlpha.600, transparent)"}
     >
       <Stack
         direction={{
@@ -39,7 +42,7 @@ export default function Footer() {
       >
         <Flex justify="center" direction={"column"}>
           <Image
-            src="http://placehold.jp/2a2a2c/ffffff/200x100.png?text=Company%20Logo&css=%7B%22font-size%20%22%3A%22%2016px%22%7D"
+            src={logo2}
             alt="Company Logo"
             rounded="lg"
             width={{
@@ -56,7 +59,18 @@ export default function Footer() {
             }}
           />
 
-          <Button color={"orange"} bg={"gray.700"} mt={"20px"}>
+          <Button
+            bg="orange.400"
+            color="white"
+            px={5}
+            mt={4}
+            py={3}
+            fontWeight="semibold"
+            rounded="lg"
+            _hover={{
+              bg: "gray.800",
+            }}
+          >
             Contact us
           </Button>
         </Flex>
@@ -97,9 +111,9 @@ export default function Footer() {
               About
             </chakra.h2>
             <Link textTransform="uppercase">Expertise</Link>
-            <Link textTransform="uppercase">Team</Link>
+            {/* <Link textTransform="uppercase">Team</Link>
             <Link textTransform="uppercase">Sponsors</Link>
-            <Link textTransform="uppercase">Press Coverage</Link>
+            <Link textTransform="uppercase">Press Coverage</Link> */}
           </Flex>
 
           <Flex justify="start" direction="column">
@@ -160,8 +174,8 @@ export default function Footer() {
               Success Stories
             </chakra.h2>
             <Link textTransform="uppercase">Testimonials</Link>
-            <Link textTransform="uppercase">Case Studies</Link>
-            <Link textTransform="uppercase">Support</Link>
+            {/* <Link textTransform="uppercase">Case Studies</Link>
+            <Link textTransform="uppercase">Support</Link> */}
           </Flex>
 
           <Flex justify="start" direction="column">
@@ -182,7 +196,7 @@ export default function Footer() {
             >
               Resourses
             </chakra.h2>
-            <Link textTransform="uppercase">Blog</Link>
+            {/* <Link textTransform="uppercase">Blog</Link> */}
             <Link textTransform="uppercase">FAQ</Link>
           </Flex>
         </HStack>

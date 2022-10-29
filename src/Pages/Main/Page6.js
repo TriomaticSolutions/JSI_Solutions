@@ -23,10 +23,6 @@ export default function Page6() {
         maxW={{ lg: "7xl" }}
         rounded={{ lg: "lg" }}
       >
-        <Box>
-          <img src={a_main4} alt="" />
-        </Box>
-
         <Flex
           py={12}
           px={6}
@@ -84,6 +80,10 @@ export default function Page6() {
             </Button>
           </Box>
         </Flex>
+
+        <Box>
+          <img src={a_main4} alt="" />
+        </Box>
       </Box>
     </Flex>
   );
