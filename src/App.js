@@ -11,11 +11,17 @@ const Visa = React.lazy(() => import("./Pages/Services/Visa/Visa"));
 const FAQ = React.lazy(() => import("./Pages/Resources/FAQ/FAQ"));
 const Signin = React.lazy(() => import("./Pages/Log/Signin/Signin"));
 const Signup = React.lazy(() => import("./Pages/Log/Signup/Signup"));
-const Dashboard = React.lazy(() => import("./Pages/User/DashBoard/Dashboard"));
-const Payment = React.lazy(() => import("./Pages/User/Payment/Payment"));
 const Pricing = React.lazy(() => import("./Pages/Pricing/Pricing"));
 const Testimonials = React.lazy(() =>
   import("./Pages/Stories/Testimonials/Testimonials")
+);
+const Home = React.lazy(() => import("./Pages/User/Home/Home"));
+const Survey = React.lazy(() => import("./Pages/User/DashBoard/Survey/Survey"));
+const Payment = React.lazy(() =>
+  import("./Pages/User/DashBoard/Payment/Payment")
+);
+const Progress = React.lazy(() =>
+  import("./Pages/User/DashBoard/Progress/Progress")
 );
 
 function App() {
@@ -23,62 +29,6 @@ function App() {
     <div className="App">
       <div className="App__container">
         <Routes>
-          {/* <Route
-            exact
-            path="/about/team"
-            element={
-              <React.Suspense fallback={<LoadingSpinner />}>
-                <Team />
-              </React.Suspense>
-            }
-          /> */}
-          {/* <Route
-            exact
-            path="/about/sponsors"
-            element={
-              <React.Suspense fallback={<LoadingSpinner />}>
-                <Sponsors />
-              </React.Suspense>
-            }
-          /> */}
-          {/* <Route
-            exact
-            path="/about/press"
-            element={
-              <React.Suspense fallback={<LoadingSpinner />}>
-                <Press />
-              </React.Suspense>
-            }
-          /> */}
-
-          {/* <Route
-            exact
-            path="/stories/cases"
-            element={
-              <React.Suspense fallback={<LoadingSpinner />}>
-                <Cases />
-              </React.Suspense>
-            }
-          /> */}
-          {/* <Route
-            exact
-            path="/resources/blog"
-            element={
-              <React.Suspense fallback={<LoadingSpinner />}>
-                <Blog />
-              </React.Suspense>
-            }
-          /> */}
-          {/* <Route
-            exact
-            path="/partnership"
-            element={
-              <React.Suspense fallback={<LoadingSpinner />}>
-                <Partnership />
-              </React.Suspense>
-            }
-          /> */}
-
           <Route
             exact
             path="/"
@@ -156,7 +106,7 @@ function App() {
             path="/dashboard"
             element={
               <React.Suspense fallback={<LoadingSpinner />}>
-                <Dashboard />
+                <Home />
               </React.Suspense>
             }
           />
@@ -171,10 +121,10 @@ function App() {
           />
           <Route
             exact
-            path="/dashboard/surey"
+            path="/dashboard/survey"
             element={
               <React.Suspense fallback={<LoadingSpinner />}>
-                <Payment />
+                <Survey />
               </React.Suspense>
             }
           />
@@ -183,7 +133,7 @@ function App() {
             path="/dashboard/progress"
             element={
               <React.Suspense fallback={<LoadingSpinner />}>
-                <Payment />
+                <Progress />
               </React.Suspense>
             }
           />

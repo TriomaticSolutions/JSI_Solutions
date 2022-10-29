@@ -17,6 +17,7 @@ import {
   FiDollarSign,
   FiBook,
   FiLogOut,
+  FiHome,
 } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import logo from "../Assets/Images/logo4.png";
@@ -58,10 +59,17 @@ const SidebarContent = ({ onClose, ...rest }) => {
 
   const LinkItems = [
     {
+      name: "Home Page",
+      icon: FiHome,
+      click: () => {
+        navigate("/dashboard");
+      },
+    },
+    {
       name: "Survey Form",
       icon: FiBook,
       click: () => {
-        navigate("/dashboard");
+        navigate("/dashboard/survey");
       },
     },
     {
@@ -89,7 +97,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
 
   return (
     <Box
-      bg={useColorModeValue("white", "gray.900")}
+      bg={"whitesmoke"}
       borderRight="1px"
       borderRightColor={useColorModeValue("gray.200", "gray.700")}
       w={{ base: "full", md: 60 }}
