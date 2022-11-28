@@ -12,9 +12,6 @@ const FAQ = React.lazy(() => import("./Pages/Resources/FAQ/FAQ"));
 const Signin = React.lazy(() => import("./Pages/Log/Signin/Signin"));
 const Signup = React.lazy(() => import("./Pages/Log/Signup/Signup"));
 const Pricing = React.lazy(() => import("./Pages/Pricing/Pricing"));
-const Testimonials = React.lazy(() =>
-  import("./Pages/Stories/Testimonials/Testimonials")
-);
 const Home = React.lazy(() => import("./Pages/User/Home/Home"));
 const Survey = React.lazy(() => import("./Pages/User/DashBoard/Survey/Survey"));
 const Payment = React.lazy(() =>
@@ -22,6 +19,9 @@ const Payment = React.lazy(() =>
 );
 const Progress = React.lazy(() =>
   import("./Pages/User/DashBoard/Progress/Progress")
+);
+const Testimonials = React.lazy(() =>
+  import("./Pages/Stories/Testimonials/Testimonials")
 );
 
 function App() {
@@ -38,6 +38,7 @@ function App() {
               </React.Suspense>
             }
           />
+
           <Route
             exact
             path="/about/expertise"
@@ -47,6 +48,7 @@ function App() {
               </React.Suspense>
             }
           />
+
           <Route
             exact
             path="/services/process"
@@ -83,6 +85,7 @@ function App() {
               </React.Suspense>
             }
           />
+
           <Route
             exact
             path="/signin"

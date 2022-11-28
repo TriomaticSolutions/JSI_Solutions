@@ -1,11 +1,4 @@
 import { Box, Flex, Image, chakra, useColorModeValue } from "@chakra-ui/react";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import GavelIcon from "@mui/icons-material/Gavel";
-import FlagIcon from "@mui/icons-material/Flag";
-import TravelExploreIcon from "@mui/icons-material/TravelExplore";
-import AccountBoxIcon from "@mui/icons-material/AccountBox";
-import InsertEmoticonIcon from "@mui/icons-material/InsertEmoticon";
-import IntegrationInstructionsIcon from "@mui/icons-material/IntegrationInstructions";
 import male__avatar from "../../../Assets/Images/male__avatar.png";
 
 const persons = [

@@ -2,6 +2,7 @@ import { Flex, Icon, Box, chakra, Image, Heading } from "@chakra-ui/react";
 
 import main2 from "../../Assets/Images/a_main2.png";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import React from "react";
 
 const cardsDetail = [
   {
@@ -28,11 +29,19 @@ const cardsDetail = [
       "Thanks to the help of BDV [] I have my Green Card andd my family dose too.",
     country: "Country 2",
   },
+  {
+    id: 4,
+    image: main2,
+    name: "Person 4",
+    content:
+      "Thanks to the help of BDV [] I have my Green Card andd my family dose too.",
+    country: "Country 43",
+  },
 ];
 
 const Cards = ({ image, name, content, country }) => {
   return (
-    <Box
+    <Box // div
       w="sm"
       mx="auto"
       bg="white"
@@ -116,7 +125,7 @@ export default function CallToActionWithIllustration() {
         Life Changing Stories <br />
       </Heading>
 
-      <Flex
+      <Flex // div style: flex
         bg="white"
         _dark={{
           bg: "#3e3e3e",

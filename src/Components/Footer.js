@@ -25,7 +25,7 @@ import logo2 from "../Assets/Images/logo5.png";
 export default function Footer() {
   return (
     <Box
-      bg="#C6F6D5"
+      bg="gray.50"
       _dark={{
         bg: "gray.600",
       }}
